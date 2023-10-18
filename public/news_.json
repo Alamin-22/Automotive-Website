@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "date": "JANUARY 11, 2023",
+        "title": "How to Choose the Right Car for You",
+        "imageSrc": "https://i.ibb.co/R298wZ8/chose.jpg",
+        "description": "Choosing the right car for you is a significant decision, and it involves several key factors. Your ideal car should align with your lifestyle, budget, and specific needs. Consider your daily commute, family size, and any personal preferences. Whether it is a compact, fuel-efficient car for city driving or a spacious SUV for family adventures, the perfect car should be a seamless fit for your life. We are here to help you navigate this journey, providing guidance and insights to ensure that you make a choice that suits you best."
+    },
+    {
+        "id": 2,
+        "date": "March 28, 2023",
+        "title": "Use This Decision to Get Your Tires Right This Winter",
+        "imageSrc": "https://i.ibb.co/zbxVDyj/tire-in-winter.jpg",
+        "description": "Choosing the right car for you is a significant decision, and it involves several key factors. Your ideal car should align with your lifestyle, budget, and specific needs. Consider your daily commute, family size, and any personal preferences. Whether it is a compact, fuel-efficient car for city driving or a spacious SUV for family adventures, the perfect car should be a seamless fit for your life. We are here to help you navigate this journey, providing guidance and insights to ensure that you make a choice that suits you best."
+    },
+    {
+        "id": 3,
+        "date": "JANUARY 11, 2023",
+        "title": "Revolutionary Electric Vehicle Breaks Barriers in Sustainability",
+        "imageSrc": "https://i.ibb.co/fF0vtc9/charge-car.jpg",
+        "description": "In an exciting leap forward for the automotive industry, a groundbreaking electric vehicle (EV) is turning heads and making headlines. This cutting-edge EV is redefining the future of sustainable transportation, offering impressive range, innovative technology, and a commitment to reducing environmental impact. Join us as we explore how this remarkable vehicle is pushing the boundaries of green mobility, changing the game for eco-conscious drivers everywhere. Stay tuned for all the details on this electrifying development and its impact on the world of automotive innovation."
+    }
+]

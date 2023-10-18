@@ -7,6 +7,7 @@ import My_Cart from "../Pages/My_Cart/My_Cart";
 import Login from "../Pages/HandleLogin/Login/Login";
 import Register from "../Pages/HandleLogin/Register/Register";
 import Contact_us from "../Components/Contact_Us/Contact_Us";
+import NewsDetails from "../Components/News/NewsDetails";
 
 const router = createBrowserRouter([
     {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
+                loader:()=>fetch("/news_.json")
             },
             {
                 path: "/add_product",
@@ -37,7 +39,13 @@ const router = createBrowserRouter([
             {
                 path:"/contact_us",
                 element:<Contact_us/>
+            },
+            {
+                path:`/news/:id`,
+                element:<NewsDetails/>,
+                loader:()=>fetch("/news_.json")
             }
+            
         ]
     },
 ]);
