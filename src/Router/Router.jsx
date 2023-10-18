@@ -25,7 +25,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
-                loader:()=>fetch("/news_.json")
+                loader: () => fetch("/news_.json")
             },
             {
                 path: "/add_product",
@@ -44,45 +44,50 @@ const router = createBrowserRouter([
                 element: <Register />
             },
             {
-                path:"/contact_us",
-                element:<Contact_us/>
+                path: "/contact_us",
+                element: <Contact_us />
             },
             {
-                path:`/news/:id`,
-                element:<NewsDetails/>,
-                loader:()=>fetch("/news_.json")
+                path: `/news/:id`,
+                element: <NewsDetails />,
+                loader: () => fetch("/news_.json")
             },
             {
-                path:"/bmw_cars",
-                element:<BMW_cars/>,
-                loader: ()=> fetch("http://localhost:5000/car")
+                path: "/bmw_cars",
+                element: <BMW_cars />,
+                loader: () => fetch("http://localhost:5000/car")
             },
             {
-                path:`/bmw_details/:id`,
-                element:<BMW_Details/>,
-                loader: ()=> fetch("http://localhost:5000/car")
+                path: `/details/:id`,
+                element: <BMW_Details />,
+                loader: () => fetch("http://localhost:5000/car")
             },
             {
-                path:"/mazada_cars",
-                element:<Mazada_cars/>
+                path: "/mazada_cars",
+                element: <Mazada_cars />,
+                loader: () => fetch("http://localhost:5000/car")
             },
             {
-                path:"/marcedes_cars",
-                element:<Marcedes_cars/>
+                path: "/marcedes_cars",
+                element: <Marcedes_cars />,
+                loader: () => fetch("http://localhost:5000/car")
             },
             {
-                path:"/toyota_cars",
-                element:<Toyota_cars/>
+                path: "/toyota_cars",
+                element: <Toyota_cars />,
+                loader: () => fetch("http://localhost:5000/car"),
             },
             {
-                path:"/tesla_cars",
-                element:<Tesla_cars/>
+                path: "/tesla_cars",
+                element: <Tesla_cars />,
+                loader: () => fetch("http://localhost:5000/car")
             },
             {
-                path:"/audi_cars",
-                element:<Audi_cars/>
-            }
-            
+                path: "/audi_cars",
+                element: <Audi_cars />,
+                loader: () => fetch("http://localhost:5000/car"),
+            },
+
         ]
     },
 ]);

@@ -8,7 +8,7 @@ const BMW_Details = () => {
 
 
     const selectedCard = Cars?.find(card => card._id === id);
-    console.log(selectedCard)
+    // console.log(selectedCard)
     return (
         <div>
             <div className="max-w-md grid grid-cols-1  md:grid-cols-4 md:max-w-7xl gap-5 mx-auto">
@@ -32,7 +32,7 @@ const BMW_Details = () => {
                         <button className="btn btn-outline btn-sm">Delete</button>
                     </div>
                     <div className="text-center my-2">
-                        <Link to={"/bmw_cars"} className="btn w-[85%] btn-outline btn-sm">Back</Link>
+                        <Link to={"/"} className="btn w-[85%] btn-outline btn-sm">Back</Link>
                     </div>
                 </div>
             </div>

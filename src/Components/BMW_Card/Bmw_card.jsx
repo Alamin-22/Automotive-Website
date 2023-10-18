@@ -32,7 +32,7 @@ const Bmw_card = (Single_bmw) => {
                     </div>
                     <div className="card-actions justify-evenly">
                         <Link className="btn btn-xs btn-outline">Update</Link>
-                        <Link to={`/bmw_details/${_id}`} className="btn btn-xs btn-outline">Details</Link>
+                        <Link to={`/details/${_id}`} className="btn btn-xs btn-outline">Details</Link>
                     </div>
                 </div>
             </div>
