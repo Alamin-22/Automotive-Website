@@ -4,7 +4,7 @@ import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 
 const Bmw_card = (Single_bmw) => {
-    const { _id, name, quantity, brand, type, price, rating, details, photo } = Single_bmw.Single_bmw;
+    const { _id, name, brand, type, price, rating, photo } = Single_bmw.Single_bmw;
     // console.log(Single_bmw.Single_bmw)
     return (
         <div>
@@ -32,7 +32,7 @@ const Bmw_card = (Single_bmw) => {
                     </div>
                     <div className="card-actions justify-evenly">
                         <Link className="btn btn-xs btn-outline">Update</Link>
-                        <Link className="btn btn-xs btn-outline">Details</Link>
+                        <Link to={`/bmw_details/${_id}`} className="btn btn-xs btn-outline">Details</Link>
                     </div>
                 </div>
             </div>

@@ -14,6 +14,7 @@ import Marcedes_cars from "../PageBrand/Marcedes_cars";
 import Toyota_cars from "../PageBrand/Toyota_cars";
 import Tesla_cars from "../PageBrand/Tesla_cars";
 import Audi_cars from "../PageBrand/Audi_cars";
+import BMW_Details from "../Components/BMW_Card/BMW_Details";
 
 const router = createBrowserRouter([
     {
@@ -54,6 +55,11 @@ const router = createBrowserRouter([
             {
                 path:"/bmw_cars",
                 element:<BMW_cars/>,
+                loader: ()=> fetch("http://localhost:5000/car")
+            },
+            {
+                path:`/bmw_details/:id`,
+                element:<BMW_Details/>,
                 loader: ()=> fetch("http://localhost:5000/car")
             },
             {
