@@ -8,6 +8,12 @@ import Login from "../Pages/HandleLogin/Login/Login";
 import Register from "../Pages/HandleLogin/Register/Register";
 import Contact_us from "../Components/Contact_Us/Contact_Us";
 import NewsDetails from "../Components/News/NewsDetails";
+import BMW_cars from "../PageBrand/BMW_cars";
+import Mazada_cars from "../PageBrand/Mazada_cars";
+import Marcedes_cars from "../PageBrand/Marcedes_cars";
+import Toyota_cars from "../PageBrand/Toyota_cars";
+import Tesla_cars from "../PageBrand/Tesla_cars";
+import Audi_cars from "../PageBrand/Audi_cars";
 
 const router = createBrowserRouter([
     {
@@ -44,6 +50,31 @@ const router = createBrowserRouter([
                 path:`/news/:id`,
                 element:<NewsDetails/>,
                 loader:()=>fetch("/news_.json")
+            },
+            {
+                path:"/bmw_cars",
+                element:<BMW_cars/>,
+                loader: ()=> fetch("http://localhost:5000/car")
+            },
+            {
+                path:"/mazada_cars",
+                element:<Mazada_cars/>
+            },
+            {
+                path:"/marcedes_cars",
+                element:<Marcedes_cars/>
+            },
+            {
+                path:"/toyota_cars",
+                element:<Toyota_cars/>
+            },
+            {
+                path:"/tesla_cars",
+                element:<Tesla_cars/>
+            },
+            {
+                path:"/audi_cars",
+                element:<Audi_cars/>
             }
             
         ]

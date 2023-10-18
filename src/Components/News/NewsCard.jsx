@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const NewsCard = ({ Anews }) => {
-    console.log(Anews)
+    // console.log(Anews)
     const { id, date, title, imageSrc, description } = Anews;
     return (
         <div>

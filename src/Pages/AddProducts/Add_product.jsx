@@ -27,8 +27,8 @@ const Add_product = () => {
             .then(response => response.json())
             .then(data => {
                 console.log(data);
-                if(data.insertedId){
-                    Swal.fire( 'Great!!',  'Car Added successfully','success' )
+                if (data.insertedId) {
+                    Swal.fire('Great!!', 'Car Added successfully', 'success')
                 }
             })
     }
@@ -71,7 +71,7 @@ const Add_product = () => {
                                 <span className="label-text">Type</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="type" placeholder="Type" className="input input-bordered w-full" required/>
+                                <input type="text" name="type" placeholder="Type" className="input input-bordered w-full" required />
                             </label>
                         </div>
                     </div>
