@@ -1,4 +1,4 @@
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import swal from 'sweetalert';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { useState } from "react";
@@ -28,8 +28,8 @@ const Register = () => {
     }
 
     return (
-        <div className="bg-base-200">
-           
+        <div>
+
             <div className="hero-content flex-col  lg:flex-row-reverse mx-auto" >
                 <div className="card  flex-shrink-0  w-full max-w-xl  shadow-2xl bg-base-200">
                     <h1 className="text-3xl font-semibold text-center mt-5">Register Now!!</h1>

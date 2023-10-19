@@ -35,7 +35,7 @@ const Add_product = () => {
     return (
         <div>
             <form onSubmit={add_Product} >
-                <div className="bg-[#F4F3F0] p-24">
+                <div className="bg-[#F4F3F0] p-3 md:p-24">
                     <h1 className="text-3xl text-center font-bold">Add Product</h1>
                     {/* form name and quantity row */}
                     <div className="md:flex mb-8">

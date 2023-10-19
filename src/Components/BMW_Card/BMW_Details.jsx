@@ -1,6 +1,6 @@
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import Rating from "react-rating";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const BMW_Details = () => {
@@ -45,6 +45,42 @@ const BMW_Details = () => {
 
     }
 
+
+    const Handle_Add_Cart = (selectedCard) => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You want to Add to Cart!",
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/added_cart`, {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(selectedCard)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.insertedId) {
+                            Swal.fire(
+                                'Great!',
+                                'Your Car has been Added In Cart.',
+                                'success'
+                            );
+                        }
+                    });
+            }
+        });
+    };
+
+
+
     return (
         <div>
             <div className="max-w-md grid grid-cols-1  md:grid-cols-4 md:max-w-7xl gap-5 mx-auto">
@@ -65,12 +101,12 @@ const BMW_Details = () => {
                         />
                     </div>
                     <div className="flex justify-evenly">
-                        <button className="btn btn-outline btn-sm">Add to cart</button>
+                        <button onClick={() => Handle_Add_Cart(selectedCard)} className="btn btn-outline btn-sm">Add to cart</button>
                         <button onClick={() => handleDelete(selectedCard._id)} className="btn btn-outline btn-sm">Delete</button>
                     </div>
-                    <div className="text-center my-2">
+                    {/* <div className="text-center my-2">
                         <Link to={"/"} className="btn w-[85%] btn-outline btn-sm">Back</Link>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

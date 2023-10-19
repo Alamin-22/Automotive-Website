@@ -10,12 +10,20 @@ const Navbar = () => {
     // }
 
     const NavLinks = <>
-        <li><NavLink to={"/"}>Home</NavLink></li>
+        <li><NavLink to={"/"} className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-red-700 underline" : ""
+        }>Home</NavLink></li>
         {/* <li><NavLink to={"/about_us"}>About Us</NavLink></li> */}
         {/* <li><NavLink to={"/services"}>Services</NavLink></li> */}
-        <li><NavLink to={"/add_product"}>Add Product</NavLink></li>
-        <li><NavLink to={"/my_cart"}>My Cart</NavLink></li>
-        <li><NavLink to={"/contact_us"}>Contact Us</NavLink></li>
+        <li><NavLink to={"/add_product"} className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-red-700 underline" : ""
+        }>Add Product</NavLink></li>
+        <li><NavLink to={"/my_cart"} className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-red-700 underline" : ""
+        }>My Cart</NavLink></li>
+        <li><NavLink to={"/contact_us"} className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-red-700 underline" : ""
+        }>Contact Us</NavLink></li>
     </>
 
 
