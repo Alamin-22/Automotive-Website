@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Mazada_Card = ({ Single_mazada }) => {
     // console.log(Single_mazada)
-    const { _id, name, brand, type, price, rating, photo } = Single_mazada;
+    const { _id, name, brand, type, price, rating, photo, quantity } = Single_mazada;
     return (
         <div>
             <div>
@@ -23,6 +23,7 @@ const Mazada_Card = ({ Single_mazada }) => {
                                 <p className='mr-6'>Brand: {brand}</p>
                                 <p className='ml-6'>Type: {type}</p>
                             </div>
+                            <p className="text-xl text-[#463d3d] font-semibold">Available: {quantity} </p>
                             {/* rating */}
                             <div>
                                 <Rating className='text-2xl text-amber-500'

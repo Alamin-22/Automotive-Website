@@ -4,7 +4,7 @@ import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 
 const Marcedes_Card = ({ Single_marcedes }) => {
-    const { _id, name, brand, type, price, rating, photo } = Single_marcedes;
+    const { _id, name, brand, type, price, rating, photo,quantity } = Single_marcedes;
     return (
         <div>
             <div>
@@ -22,6 +22,7 @@ const Marcedes_Card = ({ Single_marcedes }) => {
                                 <p className='mr-6'>Brand: {brand}</p>
                                 <p className='ml-6'>Type: {type}</p>
                             </div>
+                            <p className="text-xl text-[#463d3d] font-semibold">Available: {quantity} </p>
                             {/* rating */}
                             <div>
                                 <Rating className='text-2xl text-amber-500'

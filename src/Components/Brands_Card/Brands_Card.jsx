@@ -19,7 +19,7 @@ function CarCard() {
             {/* 2 */}
             <div className="card  bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <img src="https://i.ibb.co/C9D4s1J/mazada.jpg" alt="mazada" className="rounded-full h-44" />
+                    <img src="https://i.ibb.co/jTzYjpK/Mazda-Logo.png" alt="mazada" className="rounded-full h-44" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">Mazada</h2>
@@ -32,7 +32,7 @@ function CarCard() {
             {/* 3 */}
             <div className="card  bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <img src="https://i.ibb.co/Kqrs0Hj/marcedes.png" alt="Marcedes" className="rounded-full h-44" />
+                    <img src="https://i.ibb.co/cTtfJxc/mercedes-logo.png" alt="Marcedes" className="rounded-full h-44" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">Marcedes Benz</h2>
@@ -58,7 +58,7 @@ function CarCard() {
             {/* 5 */}
             <div className="card  bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <img src="https://i.ibb.co/sQtfZx7/tesla.jpg" alt="Tesla" className="rounded-full h-44" />
+                    <img src="https://i.ibb.co/x1Pm7LC/pngwing-com.png" alt="Tesla" className="rounded-full h-44" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">Tesla</h2>
