@@ -19,8 +19,8 @@ const Marcedes_Card = ({ Single_marcedes }) => {
                                 {name}
                             </h2>
                             <div className='flex text-xl font-medium'>
-                                <p className='mr-6'>Brand: {brand}</p>
-                                <p className='ml-6'>Type: {type}</p>
+                                <p className='mr-4'>Brand: {brand}</p>
+                                <p className='ml-4'>Type: {type}</p>
                             </div>
                             <p className="text-xl text-[#463d3d] font-semibold">Available: {quantity} </p>
                             {/* rating */}
@@ -33,7 +33,7 @@ const Marcedes_Card = ({ Single_marcedes }) => {
                                 />
                             </div>
                             <div className="card-actions justify-evenly">
-                                <Link className="btn btn-xs btn-outline">Update</Link>
+                                <Link to={`/update_car/${_id}`} className="btn btn-xs btn-outline">Update</Link>
                                 <Link to={`/details/${_id}`} className="btn btn-xs btn-outline">Details</Link>
                             </div>
                         </div>

@@ -15,6 +15,7 @@ import Toyota_cars from "../PageBrand/Toyota_cars";
 import Tesla_cars from "../PageBrand/Tesla_cars";
 import Audi_cars from "../PageBrand/Audi_cars";
 import BMW_Details from "../Components/BMW_Card/BMW_Details";
+import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 
 const router = createBrowserRouter([
     {
@@ -87,6 +88,11 @@ const router = createBrowserRouter([
                 element: <Audi_cars />,
                 loader: () => fetch("http://localhost:5000/car"),
             },
+            {
+                path: `/update_car/:id`,
+                element: <UpdateProduct />,
+                loader: ({ params }) => fetch(`http://localhost:5000/car/${params.id}`)
+            }
 
         ]
     },

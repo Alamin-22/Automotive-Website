@@ -18,7 +18,7 @@ const SocialLogin = () => {
     }
     return (
         <div>
-            <div className="divider">continue with</div>
+           
             <div className=" flex justify-evenly mb-5">
                 <button onClick={() => handleSocialLogin()} className="btn btn-primary normal-case"> <FcGoogle />Google</button>
                 <button className="btn btn-primary normal-case"> <AiOutlineGithub />GitHub</button>
