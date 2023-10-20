@@ -1,4 +1,4 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import SocialLogin from "../SocialLogin/SocialLogin";
@@ -10,9 +10,8 @@ import Swal from "sweetalert2";
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
 
-    const { CreateUser } = useContext(AuthContext);
+    const { CreateUser, UpdateProfile } = useContext(AuthContext);
 
-    const location = useLocation();
     const navigate = useNavigate();
 
     const handleRegister = (e) => {
@@ -22,21 +21,27 @@ const Register = () => {
         const email = form.get("email");
         const password = form.get("password")
         const name = form.get("name")
+        const photo = form.get("photo")
         // password validation
         if (!/^(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}$/.test(password)) {
             return swal("Error!", `Password should be At least 8 characters, including at least one uppercase letter and at least one special character`, "error");
 
         }
-        console.log(name);
+        console.log(name, photo);
         // create user
         CreateUser(email, password)
             .then(result => {
+                UpdateProfile(name, photo)
+                    .then(() => {
+                        Swal.fire('Congratulation!', 'Registration Successful!', 'success')
+                        navigate('/');
+                    })
                 console.log(result.user);
-                Swal.fire('Congratulation!', 'Registration Successful!', 'success')
-                navigate(location?.state ? location.state : '/');
             })
             .catch(error => {
                 console.log(error);
+                const message = error.message
+                swal("Error!", `${message.slice(10, 50)}`, "error");
             })
     }
 
@@ -73,6 +78,12 @@ const Register = () => {
                                     }
                                 </span>
                             </div>
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Photo URL</span>
+                            </label>
+                            <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" />
                         </div>
                         <div className="form-control mt-6">
                             <button type="submit" className="btn btn-primary">Register</button>

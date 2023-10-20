@@ -1,11 +1,13 @@
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import Rating from "react-rating";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const BMW_Details = () => {
     const Cars = useLoaderData();
     const { id } = useParams();
+    const navigate = useNavigate();
+
 
 
     const selectedCard = Cars?.find(card => card._id === id);
@@ -35,6 +37,7 @@ const BMW_Details = () => {
                                 'Your Car has been deleted.',
                                 'success'
                             )
+                            navigate("/")
                         }
 
                     })
