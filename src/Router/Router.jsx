@@ -16,6 +16,7 @@ import Tesla_cars from "../PageBrand/Tesla_cars";
 import Audi_cars from "../PageBrand/Audi_cars";
 import BMW_Details from "../Components/BMW_Card/BMW_Details";
 import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
+import Private from "../PrivateRout/Private";
 
 const router = createBrowserRouter([
     {
@@ -30,12 +31,12 @@ const router = createBrowserRouter([
             },
             {
                 path: "/add_product",
-                element: <Add_product />,
+                element: <Private><Add_product /></Private>,
             },
             {
                 path: "/my_cart",
-                element: <My_Cart />,
-                loader:()=> fetch("http://localhost:5000/added_cart")
+                element: <Private><My_Cart /></Private>,
+                loader: () => fetch("http://localhost:5000/added_cart")
             },
             {
                 path: "/login",
@@ -61,7 +62,7 @@ const router = createBrowserRouter([
             },
             {
                 path: `/details/:id`,
-                element: <BMW_Details />,
+                element: <Private><BMW_Details /></Private>,
                 loader: () => fetch("http://localhost:5000/car")
             },
             {
@@ -91,7 +92,7 @@ const router = createBrowserRouter([
             },
             {
                 path: `/update_car/:id`,
-                element: <UpdateProduct />,
+                element: <Private><UpdateProduct /></Private>,
                 loader: ({ params }) => fetch(`http://localhost:5000/car/${params.id}`)
             }
 

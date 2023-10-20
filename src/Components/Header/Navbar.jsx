@@ -1,7 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
-
+import { BsPersonCircle } from 'react-icons/bs';
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 const Navbar = () => {
-    const user = false
+    const { user, logOut } = useContext(AuthContext)
     // {
     //     user && <>
     //         <li><NavLink to={"/blogs"}>Blogs</NavLink></li>
@@ -15,18 +17,26 @@ const Navbar = () => {
         }>Home</NavLink></li>
         {/* <li><NavLink to={"/about_us"}>About Us</NavLink></li> */}
         {/* <li><NavLink to={"/services"}>Services</NavLink></li> */}
-        <li><NavLink to={"/add_product"} className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? " text-red-700 underline" : ""
-        }>Add Product</NavLink></li>
-        <li><NavLink to={"/my_cart"} className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? " text-red-700 underline" : ""
-        }>My Cart</NavLink></li>
+        {
+            user && <>
+                <li><NavLink to={"/add_product"} className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? " text-red-700 underline" : ""
+                }>Add Product</NavLink></li>
+                <li><NavLink to={"/my_cart"} className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? " text-red-700 underline" : ""
+                }>My Cart</NavLink></li>
+            </>
+        }
         <li><NavLink to={"/contact_us"} className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? " text-red-700 underline" : ""
         }>Contact Us</NavLink></li>
     </>
 
-
+    const handleLogout = () => {
+        logOut()
+            .then()
+            .catch()
+    }
 
     return (
         <div>
@@ -61,14 +71,15 @@ const Navbar = () => {
 
                                 </li>
                                 <li>
-                                    <button className="btn btn-sm  btn-ghost">Logout</button>
+                                    <button onClick={handleLogout} className="btn btn-sm  btn-ghost">Logout</button>
 
                                 </li>
                             </ul>
                         </div>
                             :
                             <Link to='/login'>
-                                <button className="btn btn-secondary">Login</button>
+                                <BsPersonCircle className="text-4xl"></BsPersonCircle>
+                                <p className="text-xs text-center">Login</p>
                             </Link>
                     }
 

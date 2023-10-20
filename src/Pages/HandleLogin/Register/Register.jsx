@@ -1,13 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
-import { useState } from "react";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import { useState } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
 
+    const { CreateUser } = useContext(AuthContext);
 
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -21,10 +27,17 @@ const Register = () => {
             return swal("Error!", `Password should be At least 8 characters, including at least one uppercase letter and at least one special character`, "error");
 
         }
-
+        console.log(name);
         // create user
-        console.log(name, email, password);
-
+        CreateUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                Swal.fire('Congratulation!', 'Registration Successful!', 'success')
+                navigate(location?.state ? location.state : '/');
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
 
     return (

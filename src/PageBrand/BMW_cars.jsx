@@ -1,6 +1,5 @@
 import { useLoaderData } from "react-router-dom";
 import Bmw_card from "../Components/BMW_Card/Bmw_card";
-
 const BMW_cars = () => {
     const Cars = useLoaderData();
     const brand = 'BMW';

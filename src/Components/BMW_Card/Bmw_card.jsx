@@ -4,10 +4,11 @@ import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 
 const Bmw_card = (Single_bmw) => {
-    const { _id, name, brand, type, price, rating, photo,quantity } = Single_bmw.Single_bmw;
+    const { _id, name, brand, type, price, rating, photo, quantity } = Single_bmw.Single_bmw;
     // console.log(Single_bmw.Single_bmw)
     return (
         <div>
+            
             <div className="card bg-base-100 shadow-xl">
                 <figure className='relative'>
                     <img src={photo} alt={name} className='w-full h-[240px]' />

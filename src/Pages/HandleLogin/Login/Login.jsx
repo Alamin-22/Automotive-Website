@@ -1,11 +1,18 @@
-import { Link} from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import { useContext } from "react";
+import { AuthContext } from "../../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
     // console.log("state", location)
+
+    const { Login } = useContext(AuthContext);
 
 
     const handleLogin = (e) => {
@@ -16,12 +23,22 @@ const Login = () => {
 
         // login
         console.log(email, password)
+        Login(email, password)
+            .then(result => {
+                console.log(result.user)
+                Swal.fire('Success!', 'Login Successful', 'success')
+                navigate(location?.state ? location.state : '/');
+            })
+            .catch(error => {
+                console.log(error);
+                Swal.fire('Login Failed!', 'Please make sure your  Email and Password is correct', 'error')
+            })
     }
 
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200  "  style={{ backgroundImage: 'url(https://i.ibb.co/FBTqRSq/pexels-supreet-7942893.jpg)' }}>
-            <div className="hero-overlay rounded-lg bg-opacity-20"></div>
+            <div className="hero min-h-screen bg-base-200  " style={{ backgroundImage: 'url(https://i.ibb.co/FBTqRSq/pexels-supreet-7942893.jpg)' }}>
+                <div className="hero-overlay rounded-lg bg-opacity-20"></div>
                 <div className="hero-content flex-col  lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold text-orange-400">Login now!</h1>
