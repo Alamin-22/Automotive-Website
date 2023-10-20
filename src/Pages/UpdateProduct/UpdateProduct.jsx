@@ -43,7 +43,7 @@ const UpdateProduct = () => {
     return (
         <div>
             <form onSubmit={Update_Product} >
-                <div className="bg-[#F4F3F0] p-3 md:p-10 lg:p-24 ">
+                <div className=" p-3 md:p-10 lg:p-24 ">
                     <h1 className="text-3xl text-center font-bold">Update Product</h1>
                     {/* form name and quantity row */}
                     <div className="md:flex mb-8">
@@ -121,7 +121,7 @@ const UpdateProduct = () => {
                             <textarea className="textarea textarea-bordered w-full h-64" defaultValue={details} name="details" required placeholder="Write The product details here........"></textarea>
                         </label>
                     </div>
-                    <input type="submit" value="Add Card" className="btn btn-block my-3 bg-[#cbb597] hover:bg-[#D2B48C]" />
+                    <input type="submit" value="Add Card" className="btn btn-block my-3 btn-outline" />
 
                 </div>
             </form>

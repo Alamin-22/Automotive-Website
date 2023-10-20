@@ -1,8 +1,8 @@
 
-const Contact_us = () => {
+const Contact_Us = () => {
     return (
-        <div className="bg-gray-200 h-[80vh]">
-            <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 items-center ">
+        <div>
+            <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 items-center dark:bg-gray-800 dark:text-gray-100">
                 <div className="py-6 md:py-0 md:px-6">
                     <h1 className="text-4xl font-bold">Get in touch</h1>
                     <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
@@ -28,18 +28,18 @@ const Contact_us = () => {
                         </p>
                     </div>
                 </div>
-                <form className="space-y-6">
+                <form noValidate="" className="space-y-6">
                     <div>
                         <label htmlFor="name" className="text-sm">Full name</label>
-                        <input id="name" type="text" placeholder="" className="w-full p-3 rounded " />
+                        <input id="name" type="text" placeholder="" className="input input-bordered w-full p-3 rounded dark:bg-gray-800" />
                     </div>
                     <div>
                         <label htmlFor="email" className="text-sm">Email</label>
-                        <input id="email" type="email" className="w-full p-3 rounded " />
+                        <input id="email" type="email" className="input input-bordered w-full  p-3 rounded dark:bg-gray-800" />
                     </div>
                     <div>
                         <label htmlFor="message" className="text-sm">Message</label>
-                        <textarea id="message" rows="3" className="w-full p-3 rounded"></textarea>
+                        <textarea id="message" rows="6" className="textarea textarea-bordered w-full p-3 rounded dark:bg-gray-800"></textarea>
                     </div>
                     <button type="submit" className="btn btn-primary w-full">Send Message</button>
 
@@ -49,4 +49,6 @@ const Contact_us = () => {
     );
 };
 
-export default Contact_us;
+export default Contact_Us;
+
+

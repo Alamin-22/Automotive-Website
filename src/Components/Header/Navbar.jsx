@@ -5,6 +5,9 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import DarkModeToggle from "../../Theme/DarkModeToggle";
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
+
+
+
     // Theme
     const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light")
     useEffect(() => {
@@ -31,7 +34,9 @@ const Navbar = () => {
         <li><NavLink to={"/"} className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? " text-red-700 underline" : ""
         }>Home</NavLink></li>
-        {/* <li><NavLink to={"/about_us"}>About Us</NavLink></li> */}
+        <li><NavLink to={"/about_us"} className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-red-700 underline" : ""
+        }>About Us</NavLink></li>
         {/* <li><NavLink to={"/services"}>Services</NavLink></li> */}
         {
             user && <>
@@ -76,10 +81,10 @@ const Navbar = () => {
                         {NavLinks}
                     </ul>
                 </div>
-                
+
                 {/* <p><input type="checkbox" className=" toggle toggle-success" checked /></p> */}
                 <div className="navbar-end">
-                <DarkModeToggle handleToggle={handleToggle}></DarkModeToggle>
+                    <DarkModeToggle handleToggle={handleToggle}></DarkModeToggle>
                     {
                         user ? <div className="dropdown dropdown-end">
                             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">

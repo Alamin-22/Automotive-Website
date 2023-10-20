@@ -35,7 +35,7 @@ const Add_product = () => {
     return (
         <div>
             <form onSubmit={add_Product} >
-                <div className="bg-[#F4F3F0] p-3 md:p-24">
+                <div className="p-3 md:p-24">
                     <h1 className="text-3xl text-center font-bold">Add Product</h1>
                     {/* form name and quantity row */}
                     <div className="md:flex mb-8">
@@ -113,7 +113,7 @@ const Add_product = () => {
                             <textarea className="textarea textarea-bordered w-full h-64" name="details" required placeholder="Write Product Details........"></textarea>
                         </label>
                     </div>
-                    <input type="submit" value="Add Card" className="btn my-3 btn-block bg-[#D2B48C] hover:bg-[#D2B48C]" />
+                    <input type="submit" value="Add Card" className="btn my-3 btn-block btn-outline" />
 
                 </div>
             </form>

@@ -10,16 +10,20 @@ const Mazada_cars = () => {
     return (
         <div>
             <div className="max-w-md md:max-w-7xl  mx-auto">
-                <Mazda_Slider></Mazda_Slider>
+
 
                 {
-                    Mazada_Cars.length > 0 ? <> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10">
-                        {
-                            Mazada_Cars.map((Single_mazada, ixd) => <Mazada_Card key={ixd} Single_mazada={Single_mazada}></Mazada_Card>)
-                        }
-                    </div></>
+                    Mazada_Cars.length > 0 ?
+                        <>
+                            <Mazda_Slider></Mazda_Slider>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10">
+                                {
+                                    Mazada_Cars.map((Single_mazada, ixd) => <Mazada_Card key={ixd} Single_mazada={Single_mazada}></Mazada_Card>)
+                                }
+                            </div>
+                        </>
                         :
-                        <><h1> Coming Soon</h1> </>
+                        <><h1 className="h-[80vh]  text-7xl flex justify-center items-center font-semibold"> Coming Soon...</h1> </>
                 }
 
             </div>

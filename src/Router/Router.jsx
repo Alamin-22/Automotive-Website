@@ -18,6 +18,7 @@ import BMW_Details from "../Components/BMW_Card/BMW_Details";
 import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 import Private from "../PrivateRout/Private";
 import Services from "../Pages/Services/Services";
+import AboutUs from "../Pages/AboutUs/AboutUs";
 
 const router = createBrowserRouter([
     {
@@ -47,6 +48,11 @@ const router = createBrowserRouter([
                 path: "/register",
                 element: <Register />
             },
+            {
+                path: "/about_us",
+                element: <AboutUs />,
+            }
+            ,
             {
                 path: "/contact_us",
                 element: <Contact_us />

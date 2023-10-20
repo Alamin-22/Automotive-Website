@@ -6,7 +6,7 @@ const NewsCard = ({ Anews }) => {
     const { id, date, title, imageSrc, description } = Anews;
     return (
         <div>
-            <div className="card card-compact bg-base-100 shadow-xl">
+            <div className="card card-compact bg-stone-200 text-gray-700 border rounded-xl shadow-xl">
                 <figure><img src={imageSrc} alt="Shoes" className='h-[244px]' /></figure>
                 <div className="card-body">
                     <p>{date}</p>
