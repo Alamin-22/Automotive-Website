@@ -1,15 +1,31 @@
 import { Link, NavLink } from "react-router-dom";
 import { BsPersonCircle } from 'react-icons/bs';
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import DarkModeToggle from "../../Theme/DarkModeToggle";
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
-    // {
-    //     user && <>
-    //         <li><NavLink to={"/blogs"}>Blogs</NavLink></li>
-    //         <li><NavLink to={"/events"}>Events</NavLink></li>
-    //     </>
-    // }
+    // Theme
+    const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light")
+    useEffect(() => {
+        localStorage.setItem("theme", theme);
+        const localTheme = localStorage.getItem("theme");
+        document.querySelector("html").setAttribute("data-theme", localTheme)
+    }, [theme]);
+
+    const handleToggle = e => {
+        if (e.target.checked) {
+            setTheme("dark")
+        } else {
+            setTheme("light")
+        }
+    }
+
+
+
+
+
+
 
     const NavLinks = <>
         <li><NavLink to={"/"} className={({ isActive, isPending }) =>
@@ -27,6 +43,9 @@ const Navbar = () => {
                 }>My Cart</NavLink></li>
             </>
         }
+        <li><NavLink to={"/services"} className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-red-700 underline" : ""
+        }>Services</NavLink></li>
         <li><NavLink to={"/contact_us"} className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? " text-red-700 underline" : ""
         }>Contact Us</NavLink></li>
@@ -57,7 +76,10 @@ const Navbar = () => {
                         {NavLinks}
                     </ul>
                 </div>
+                
+                {/* <p><input type="checkbox" className=" toggle toggle-success" checked /></p> */}
                 <div className="navbar-end">
+                <DarkModeToggle handleToggle={handleToggle}></DarkModeToggle>
                     {
                         user ? <div className="dropdown dropdown-end">
                             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">

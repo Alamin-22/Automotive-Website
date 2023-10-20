@@ -17,6 +17,7 @@ import Audi_cars from "../PageBrand/Audi_cars";
 import BMW_Details from "../Components/BMW_Card/BMW_Details";
 import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 import Private from "../PrivateRout/Private";
+import Services from "../Pages/Services/Services";
 
 const router = createBrowserRouter([
     {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
             {
                 path: "/contact_us",
                 element: <Contact_us />
+            },
+            {
+                path: "/services",
+                element: <Services />,
             },
             {
                 path: `/news/:id`,
