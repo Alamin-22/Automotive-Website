@@ -38,7 +38,7 @@ const router = createBrowserRouter([
             {
                 path: "/my_cart",
                 element: <Private><My_Cart /></Private>,
-                loader: () => fetch("http://localhost:5000/added_cart")
+                loader: () => fetch("https://b8a10-brandshop-server-side-alamin-22-pfc4bakvf.vercel.app/added_cart")
             },
             {
                 path: "/login",
@@ -69,42 +69,42 @@ const router = createBrowserRouter([
             {
                 path: "/bmw_cars",
                 element: <BMW_cars />,
-                loader: () => fetch("http://localhost:5000/car")
+                loader: () => fetch("https://b8a10-brandshop-server-side-alamin-22-pfc4bakvf.vercel.app/car")
             },
             {
                 path: `/details/:id`,
                 element: <Private><BMW_Details /></Private>,
-                loader: () => fetch("http://localhost:5000/car")
+                loader: () => fetch("https://b8a10-brandshop-server-side-alamin-22-pfc4bakvf.vercel.app/car")
             },
             {
                 path: "/mazada_cars",
                 element: <Mazada_cars />,
-                loader: () => fetch("http://localhost:5000/car")
+                loader: () => fetch("https://b8a10-brandshop-server-side-alamin-22-pfc4bakvf.vercel.app/car")
             },
             {
                 path: "/marcedes_cars",
                 element: <Marcedes_cars />,
-                loader: () => fetch("http://localhost:5000/car")
+                loader: () => fetch("https://b8a10-brandshop-server-side-alamin-22-pfc4bakvf.vercel.app/car")
             },
             {
                 path: "/toyota_cars",
                 element: <Toyota_cars />,
-                loader: () => fetch("http://localhost:5000/car"),
+                loader: () => fetch("https://b8a10-brandshop-server-side-alamin-22-pfc4bakvf.vercel.app/car"),
             },
             {
                 path: "/tesla_cars",
                 element: <Tesla_cars />,
-                loader: () => fetch("http://localhost:5000/car")
+                loader: () => fetch("https://b8a10-brandshop-server-side-alamin-22-pfc4bakvf.vercel.app/car")
             },
             {
                 path: "/audi_cars",
                 element: <Audi_cars />,
-                loader: () => fetch("http://localhost:5000/car"),
+                loader: () => fetch("https://b8a10-brandshop-server-side-alamin-22-pfc4bakvf.vercel.app/car"),
             },
             {
                 path: `/update_car/:id`,
                 element: <Private><UpdateProduct /></Private>,
-                loader: ({ params }) => fetch(`http://localhost:5000/car/${params.id}`)
+                loader: ({ params }) => fetch(`https://b8a10-brandshop-server-side-alamin-22-pfc4bakvf.vercel.app/car/${params.id}`)
             }
 
         ]

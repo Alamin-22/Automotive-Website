@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import About_Faq from "../../Components/About_UsFAQ/About_Faq";
 
 
@@ -17,9 +18,9 @@ const AboutUs = () => {
                                 </p>
                             </div>
                             <div className="flex items-center justify-start gap-4 flex-wrap">
-                                <a href="#" className="inline-block items-center bg-black px-6 py-3 text-center font-semibold text-white">
-                                    Learn More
-                                </a>
+                                <Link to={"/"} className="inline-block items-center bg-black px-6 py-3 text-center font-semibold text-white">
+                                    Explore
+                                </Link>
                             </div>
                             <div className="mb-8 mt-8 h-px w-full bg-black"></div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4">

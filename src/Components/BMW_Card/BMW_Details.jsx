@@ -25,7 +25,7 @@ const BMW_Details = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/car/${_id}`, {
+                fetch(`https://b8a10-brandshop-server-side-alamin-22-pfc4bakvf.vercel.app/car/${_id}`, {
                     method: "DELETE",
                 })
                     .then(res => res.json())
@@ -60,7 +60,7 @@ const BMW_Details = () => {
             confirmButtonText: 'Yes!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/added_cart`, {
+                fetch(`https://b8a10-brandshop-server-side-alamin-22-pfc4bakvf.vercel.app/added_cart`, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

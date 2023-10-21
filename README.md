@@ -20,7 +20,7 @@ Our automotive website is dedicated to serving automotive enthusiasts, car buyer
 
 ## Client-Side Live Link
 
-You can access the client side of our automotive website [here](Your Client-Side Live Link).
+You can access the client side of our automotive website https://assignment-10-2f90f.web.app/
 
 Feel free to explore our website and make the most of the information and services we offer. If you have any feedback or encounter issues, please don't hesitate to contact our support team.
 

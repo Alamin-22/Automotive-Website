@@ -17,7 +17,7 @@ const Add_product = () => {
         // console.log(NewCar);
 
         // send data to the server
-        fetch('http://localhost:5000/car', {
+        fetch('https://b8a10-brandshop-server-side-alamin-22-pfc4bakvf.vercel.app/car', {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -58,14 +58,6 @@ const Add_product = () => {
                     </div>
                     {/* form brand row */}
                     <div className="md:flex mb-8">
-                        {/* <div className="form-control md:w-1/2">
-                            <label className="label">
-                                <span className="label-text">Brand Name</span>
-                            </label>
-                            <label className="input-group">
-                                <input type="text" name="brand" placeholder="Brand Name" className="input input-bordered w-full" required />
-                            </label>
-                        </div> */}
                         <div className="form-control md:w-1/2">
                             <label className="label">
                                 <span className="label-text">Brand Name</span>

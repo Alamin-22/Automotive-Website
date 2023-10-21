@@ -20,7 +20,7 @@ const MyCart_Card = ({ Cart, Carts, setCarts }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/added_cart/${_id}`, {
+                fetch(`https://b8a10-brandshop-server-side-alamin-22-pfc4bakvf.vercel.app/added_cart/${_id}`, {
                     method: "DELETE",
                 })
                     .then(res => res.json())

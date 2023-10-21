@@ -5,7 +5,7 @@ const UpdateProduct = () => {
     const Selected_Car = useLoaderData();
     const { _id, name, brand, type, price, rating, photo, quantity, details } = Selected_Car;
     const navigate = useNavigate();
-  
+
 
 
     const Update_Product = e => {
@@ -23,7 +23,7 @@ const UpdateProduct = () => {
         // console.log(UpdateCar);
 
         // send data to the server
-        fetch(`http://localhost:5000/car/${_id}`, {
+        fetch(`https://b8a10-brandshop-server-side-alamin-22-pfc4bakvf.vercel.app/car/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",
@@ -66,12 +66,28 @@ const UpdateProduct = () => {
                     </div>
                     {/* form brand row */}
                     <div className="md:flex mb-8">
-                        <div className="form-control md:w-1/2">
+                        {/* <div className="form-control md:w-1/2">
                             <label className="label">
                                 <span className="label-text">Brand Name</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="brand" placeholder="Brand Name" defaultValue={brand} className="input input-bordered w-full" required />
+                            </label>
+                        </div> */}
+                        <div className="form-control md:w-1/2">
+                            <label className="label">
+                                <span className="label-text">Brand Name</span>
+                            </label>
+                            <label className="input-group">
+                                <select name="brand" defaultValue={brand} className="select select-bordered w-full" required>
+                                    {/* <option value="" disabled selected>Select Brand</option> */}
+                                    <option value="BMW">BMW</option>
+                                    <option value="Audi">Audi</option>
+                                    <option value="Mercedes">Mercedes</option>
+                                    <option value="Toyota">Toyota</option>
+                                    <option value="Tesla">Tesla</option>
+                                    <option value="Mazda">Mazda</option>
+                                </select>
                             </label>
                         </div>
                         <div className="form-control md:w-1/2 md:ml-4">
@@ -121,7 +137,7 @@ const UpdateProduct = () => {
                             <textarea className="textarea textarea-bordered w-full h-64" defaultValue={details} name="details" required placeholder="Write The product details here........"></textarea>
                         </label>
                     </div>
-                    <input type="submit" value="Add Card" className="btn btn-block my-3 btn-outline" />
+                    <input type="submit" value="Update Card" className="btn btn-block my-3 btn-outline" />
 
                 </div>
             </form>
