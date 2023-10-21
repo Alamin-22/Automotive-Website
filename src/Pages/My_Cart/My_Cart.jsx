@@ -11,7 +11,7 @@ const My_Cart = () => {
     return (
         <div className="max-w-7xl px-3  mx-auto my-10">
             {
-                Carts.length === 0 ? <h1>You have not added any Cart Yet</h1>
+                Carts.length === 0 ? <h1 className="text-5xl flex h-[45vh] items-center justify-center">You have not added any Cart Yet</h1>
                     :
                     <div className=" grid lg:grid-cols-2 gap-5">
                         {
