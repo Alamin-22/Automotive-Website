@@ -107,9 +107,7 @@ const BMW_Details = () => {
                         <button onClick={() => Handle_Add_Cart(selectedCard)} className="btn btn-outline btn-sm">Add to cart</button>
                         <button onClick={() => handleDelete(selectedCard._id)} className="btn btn-outline btn-sm">Delete</button>
                     </div>
-                    {/* <div className="text-center my-2">
-                        <Link to={"/"} className="btn w-[85%] btn-outline btn-sm">Back</Link>
-                    </div> */}
+                    <p className="text-red-600 text-sm pt-3">If you Delete from here it will delete from the main DB</p>
                 </div>
             </div>
         </div>

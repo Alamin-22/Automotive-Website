@@ -58,20 +58,37 @@ const Add_product = () => {
                     </div>
                     {/* form brand row */}
                     <div className="md:flex mb-8">
-                        <div className="form-control md:w-1/2">
+                        {/* <div className="form-control md:w-1/2">
                             <label className="label">
                                 <span className="label-text">Brand Name</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="brand" placeholder="Brand Name" className="input input-bordered w-full" required />
                             </label>
+                        </div> */}
+                        <div className="form-control md:w-1/2">
+                            <label className="label">
+                                <span className="label-text">Brand Name</span>
+                            </label>
+                            <label className="input-group">
+                                <select name="brand" className="select select-bordered w-full" required>
+                                    <option value="" disabled selected>Select Brand</option>
+                                    <option value="BMW">BMW</option>
+                                    <option value="Audi">Audi</option>
+                                    <option value="Mercedes">Mercedes</option>
+                                    <option value="Toyota">Toyota</option>
+                                    <option value="Tesla">Tesla</option>
+                                    <option value="Mazda">Mazda</option>
+                                </select>
+                            </label>
                         </div>
+
                         <div className="form-control md:w-1/2 md:ml-4">
                             <label className="label">
                                 <span className="label-text">Type</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="type" placeholder="Type" className="input input-bordered w-full" required />
+                                <input type="text" name="type" defaultValue={"AutoMobile"} placeholder="Type" className="input input-bordered w-full" required />
                             </label>
                         </div>
                     </div>

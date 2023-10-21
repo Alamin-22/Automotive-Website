@@ -11,7 +11,7 @@ const NewsDetails = () => {
     return (
         <div>
 
-            <div className="card w-[70%] mx-auto card-compact bg-base-100 shadow-xl">
+            <div className="card w-[70%] mx-auto card-compact bg-stone-200 text-gray-700 shadow-xl">
                 <figure><img src={selectedCard.imageSrc} alt="Shoes" className='h-[60vh] w-full' /></figure>
                 <div className="card-body">
                     <p>{selectedCard.date}</p>

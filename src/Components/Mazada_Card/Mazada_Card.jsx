@@ -10,7 +10,7 @@ const Mazada_Card = ({ Single_mazada }) => {
         <div>
             <div>
                 <div>
-                    <div className="card bg-base-100 shadow-xl">
+                    <div className="card bg-stone-200 text-gray-700 shadow-xl">
                         <figure className='relative'>
                             <img src={photo} alt={name} className='w-full h-[240px]' />
                             <div className=" absolute top-0 right-0 badge badge-neutral text-xl">{price} $</div>

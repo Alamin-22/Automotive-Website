@@ -10,11 +10,15 @@ const My_Cart = () => {
 
     return (
         <div className="max-w-7xl px-3  mx-auto my-10">
-            <div className=" grid lg:grid-cols-2 gap-5">
-                {
-                    Carts.map((Cart) => <MyCart_Card key={Cart._id} Carts={Carts} setCarts={setCarts} Cart={Cart}></MyCart_Card>)
-                }
-            </div>
+            {
+                Carts.length === 0 ? <h1>You have not added any Cart Yet</h1>
+                    :
+                    <div className=" grid lg:grid-cols-2 gap-5">
+                        {
+                            Carts.map((Cart) => <MyCart_Card key={Cart._id} Carts={Carts} setCarts={setCarts} Cart={Cart}></MyCart_Card>)
+                        }
+                    </div>
+            }
         </div>
     );
 };
